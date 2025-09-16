@@ -72,6 +72,7 @@ fun GamesScreen(modifier: Modifier = Modifier) {
                 Column() {
                     Text(text = it.title)
                 }
+                GameCard(game = it)
             }
         }
     }
