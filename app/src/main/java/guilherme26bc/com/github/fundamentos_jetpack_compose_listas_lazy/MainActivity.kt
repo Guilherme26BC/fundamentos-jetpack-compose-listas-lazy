@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
@@ -32,6 +33,7 @@ import androidx.compose.ui.unit.sp
 import carreiras.com.github.fundamentos_jetpack_compose_listas_lazy.repository.getAllGames
 import carreiras.com.github.fundamentos_jetpack_compose_listas_lazy.repository.getGamesByStudio
 import guilherme26bc.com.github.fundamentos_jetpack_compose_listas_lazy.components.GameCard
+import guilherme26bc.com.github.fundamentos_jetpack_compose_listas_lazy.components.StudioCard
 import guilherme26bc.com.github.fundamentos_jetpack_compose_listas_lazy.ui.theme.FundamentosjetpackcomposelistaslazyTheme
 
 class MainActivity : ComponentActivity() {
@@ -74,12 +76,14 @@ fun GamesScreen(modifier: Modifier = Modifier) {
                 }
             }
         )
+        LazyRow(){
+            items(gamesListState){
+                StudioCard(game = it)
+            }
+        }
         Spacer(modifier = Modifier.height(16.dp))
         LazyColumn() {
             items(gamesListState) {
-                Column() {
-                    Text(text = it.title)
-                }
                 GameCard(game = it)
             }
         }
