@@ -77,8 +77,12 @@ fun GamesScreen(modifier: Modifier = Modifier) {
             }
         )
         LazyRow(){
-            items(gamesListState){
-                StudioCard(game = it)
+            items(gamesListState){game->
+                StudioCard(game = game,
+                    onClick = {
+                        searchTextState =game.studio
+                        gamesListState = getGamesByStudio(game.studio)
+                    })
             }
         }
         Spacer(modifier = Modifier.height(16.dp))
