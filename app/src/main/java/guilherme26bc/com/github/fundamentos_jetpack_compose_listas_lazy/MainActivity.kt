@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -26,6 +27,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -76,6 +78,21 @@ fun GamesScreen(modifier: Modifier = Modifier) {
                 }
             }
         )
+        if(searchTextState.isNotEmpty()){
+            Text(
+                text = "limpar filtros",
+                modifier = Modifier.padding(top = 6.dp)
+                    .fillMaxWidth()
+                    .clickable {
+                        searchTextState = ""
+                        gamesListState = getAllGames();
+                    },
+                fontWeight = FontWeight.Bold,
+                color = Color.Blue
+
+            )
+        }
+        Spacer(modifier = Modifier.height(12.dp))
         LazyRow(){
             items(gamesListState){game->
                 StudioCard(game = game,
