@@ -16,10 +16,11 @@ Aqui estão algumas capturas de tela do projeto:
 ![Texto alternativo para a Imagem 1](images/appInicio.png)
 *Tela inicial do app*
 
-### [Nome da Imagem 2]
+### [Botao limpar filtros]
 ![Texto alternativo para a Imagem 2](images/botaoLimparFiltros.png)
 *Tela após digitar algo no textField, adiciona um botão de limpar filtros.*
 
-### [Nome da Imagem 3]
+### [filtro dos studio cards]
 ![Texto alternativo para a Imagem 3](images/filtroClicado.png)
-*O que acontece quando clicamos em um dos filtros pré selecionados/ a lista de estúdios.*
+*O que acontece quando clicamos em um dos filtros pré selecionados/a lista de estúdios.*
+
