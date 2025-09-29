@@ -98,7 +98,7 @@ fun GamesScreen(modifier: Modifier = Modifier) {
                 StudioCard(game = game,
                     onClick = {
                         searchTextState =game.studio
-                        gamesListState = getGamesByStudio(game.studio)
+                        gamesListState = getGamesByStudio(searchTextState)
                     })
             }
         }
