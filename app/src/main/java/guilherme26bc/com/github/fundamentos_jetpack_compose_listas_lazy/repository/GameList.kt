@@ -5,7 +5,7 @@ import carreiras.com.github.fundamentos_jetpack_compose_listas_lazy.model.Game
 fun getAllGames(): List<Game> {
     return listOf(
         Game(id = 1, title = "Double Dragon", studio = "Technos", releaseYear = 1987),
-        Game(id = 2, title = "Batletoads", studio = "Tradewest", releaseYear = 1991),
+        Game(id = 2, title = "Battletoads", studio = "Tradewest", releaseYear = 1991),
         Game(id = 3, title = "Enduro", studio = "Activision", releaseYear = 1983),
         Game(id = 4, title = "Ikari Warriors", studio = "SNK", releaseYear = 1986),
         Game(id = 5, title = "Captain Commando", studio = "Capcom", releaseYear = 1991),
